@@ -10,7 +10,7 @@
 * **Pontos Fracos:**
   * O dashboard pode ser visualmente cansativo e confuso. O uso excessivo de cores e o acúmulo de métricas na mesma tela dificultam a priorização de ações.
 * **Fotos:**
-  ![Interface Paresi](assets/1comp.png)
+  ![Interface Paresi](competitor-1.png)
 
 ---
 
@@ -21,7 +21,7 @@
 * **Pontos Fracos:**
   * A profundidade técnica de alguns indicadores exige um esforço maior de interpretação, o que pode ser uma barreira para equipes que estão tendo o primeiro contato com o tema.
 * **Fotos:**
-  ![Interface Orkea](assets/2comp.png)
+  ![Interface Orkea](assets/competitor-2.png)
 
 ---
 
@@ -32,7 +32,7 @@
 * **Pontos Fracos:**
   * A página inicial peca pelo excesso de elementos simultâneos e a falta de padronização nas imagens, tirando um pouco da consistência profissional da interface.
 * **Fotos:**
-  ![Interface ESG Business](assets/3comp.png)
+  ![Interface ESG Business](assets/competitor-3.png)
 
 ---
 
@@ -43,7 +43,7 @@
 * **Pontos Fracos:**
   * Por ser rigorosa e baseada em evidências, a jornada de preenchimento e envio de documentos comprobatórios é longa e trabalhosa.
 * **Fotos:**
-  ![Interface EcoVadis](assets/4comp.png)
+  ![Interface EcoVadis](assets/competitor-4.png)
 
 ---
 
@@ -54,7 +54,7 @@
 * **Pontos Fracos:**
   * Curva de aprendizado alta. A densidade das tabelas, a linguagem técnica e a grande quantidade de formulários no setup inicial podem assustar usuários menos experientes.
 * **Fotos:**
-  ![Interface Deep ESG](assets/5comp.png)
+  ![Interface Deep ESG](assets/competitor-5.png)
 
 # Análise de Similares (Benchmarking)
 

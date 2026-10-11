@@ -122,30 +122,8 @@ Configure `SECRET_KEY`, `ENVIRONMENT` e `DATABASE_URL` como variáveis de ambien
 
 ---
 
-## Entrega 01:
-
-* [Benchmark - Análise de Competidores](./docs/analisedecompetidores.md)
-
----
-
-### BackLog
-![Print BackLog](docs/sprints/BackLog.jpg)
-
-### Quadro do 1º Sprint
-![Print do Quadro de sprints](docs/sprints/Sprint1.jpg)
-
-
-## Entrega 02:
-
-### Quadro do 2º Sprint
-![Print do Quadro de sprints](docs/sprints/Sprint2.jpeg)
-
-### Link do Site: 
-[Link para o site](https://projeto-verdigis.onrender.com)
-
-### Screencast de explicação do código Django
-[Link para o vídeo](https://youtu.be/IaMJn3oHWg4)
-(Legendas disponíveis no YouTube)
+## Entregas
+Veja o andamento de cada entrega em [docs/README.md](./docs/README.md).
 
 ---
 
