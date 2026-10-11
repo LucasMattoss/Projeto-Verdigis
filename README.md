@@ -110,13 +110,13 @@ Configure `SECRET_KEY`, `ENVIRONMENT` e `DATABASE_URL` como variáveis de ambien
 
 ```
 .
-├── verdigis/       Configuração do projeto Django (settings, urls, wsgi)
-├── forum/          App principal: models, views, templates e admin
-├── hello/          App inicial de teste
-├── docs/           Documentação (benchmark de concorrentes)
-├── sprint/         Capturas de backlog, sprints e bug tracker
-├── staticfiles/    Saída do collectstatic
-├── build.sh        Script de build para deploy
+├── verdigis/       
+├── forum/          
+├── accounts/
+├── docs/           
+├── build.sh        
+├── manage.py
+├── .gitignore
 └── requirements.txt
 ```
 
