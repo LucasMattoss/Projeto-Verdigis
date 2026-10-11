@@ -4,6 +4,7 @@ venv/
 
 # Cache do Python
 __pycache__/
+staticfiles/
 *.pyc
 
 # Banco de dados local
