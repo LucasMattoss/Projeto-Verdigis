@@ -78,7 +78,7 @@ nav {
 
 main {
     flex: 1;
-    max-width: 900px; /* Reduz para 900px para alinhar todo o conteúdo ao centro */
+    max-width: 900px; 
     margin: 2.5rem auto;
     padding: 0 1.5rem;
     width: 100%;
@@ -104,14 +104,14 @@ footer {
 
 .secao-conteudo {
     background: white;
-    padding: 2.2rem 2.5rem; /* Aumenta o padding para o texto não ficar colado nas bordas */
+    padding: 2.2rem 2.5rem; 
     border-radius: 8px;
     margin-bottom: 2.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .secao-conteudo p:first-of-type {
-    max-width: 80%; /* Reduz a largura do 1º parágrafo para 80% do cartão */
+    max-width: 80%; 
 }
 
 .secao-conteudo h2 {
