@@ -1,0 +1,10 @@
+{% comment %}
+  Login (accounts.views.login) - frontend a ser implementado.
+
+  URL: {% url 'login' %}  |  Métodos: GET (exibe) e POST (envia)
+  Contexto:
+    form (LoginForm) com os campos username e password
+    next (str) - destino após o login; reenviar como <input type="hidden" name="next">
+  O formulário precisa de {% csrf_token %} e deve enviar POST para a mesma URL.
+  Credenciais inválidas: form.non_field_errors.
+{% endcomment %}

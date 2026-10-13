@@ -1,0 +1,9 @@
+{% comment %}
+  Cadastro (accounts.views.signup) - frontend a ser implementado.
+
+  URL: {% url 'signup' %}  |  Métodos: GET (exibe) e POST (envia)
+  Contexto: form (SignupForm) com os campos
+    username, email, password1, password2
+  O formulário precisa de {% csrf_token %} e deve enviar POST para a mesma URL.
+  Erros: form.errors / form.<campo>.errors. Sucesso: login automático + redirect.
+{% endcomment %}
