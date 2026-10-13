@@ -7,3 +7,13 @@
   em todos os templates.
   Destino padrão após login e cadastro (settings.LOGIN_REDIRECT_URL).
 {% endcomment %}
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Verdigis{% endblock %}
+
+{% block content %}
+  <section class="form-card narrow">
+    <h1>Dashboard</h1>
+    <p>Bem-vindo(a), {{ user.username }}!</p>
+  </section>
+{% endblock %}
