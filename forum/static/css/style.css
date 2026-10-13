@@ -89,7 +89,7 @@ footer {
     background-color: #525fa2;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.1rem;
     margin-top: auto;
 }
 
@@ -179,6 +179,17 @@ footer {
     margin: 0 auto;
 }
 
+.secao-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao-form a:hover {
+    text-decoration: underline;
+    color: #91ab53;
+}
+
 .secao-form h2 {
     color: var(--primary-color);
     margin-top: 0;
@@ -199,7 +210,7 @@ footer {
 
 .form-group label {
     font-weight: 600;
-    color: #444;
+    color: var(--primary-color);
 }
 
 .form-group input,
@@ -277,4 +288,10 @@ button a {
 .membros-lista a:hover {
     text-decoration: underline;
     color: #95b154;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    opacity: 0.6;
 }

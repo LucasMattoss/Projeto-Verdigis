@@ -12,6 +12,13 @@ class SignupForm(UserCreationForm):
         model = User
         fields = ('username', 'email')
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs['placeholder'] = 'Digite seu nome de usuário'
+        self.fields['email'].widget.attrs['placeholder'] = 'seuemail@exemplo.com'
+        self.fields['password1'].widget.attrs['placeholder'] = 'Crie uma senha'
+        self.fields['password2'].widget.attrs['placeholder'] = 'Repita a senha'
+
     def clean_email(self):
         email = self.cleaned_data['email'].strip().lower()
         if User.objects.filter(email__iexact=email).exists():
