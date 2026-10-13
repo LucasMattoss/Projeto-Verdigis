@@ -23,7 +23,7 @@ def signup(request):
         messages.success(request, 'Conta criada com sucesso.')
         return redirect(settings.LOGIN_REDIRECT_URL)
 
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'accounts/signup.html', {'form': form})
 
 
 def login(request):
@@ -41,7 +41,7 @@ def login(request):
         )
         return redirect(next_url if destino_seguro else settings.LOGIN_REDIRECT_URL)
 
-    return render(request, 'login.html', {'form': form, 'next': next_url})
+    return render(request, 'accounts/login.html', {'form': form, 'next': next_url})
 
 
 @require_POST
@@ -61,4 +61,4 @@ def delete(request):
         messages.success(request, 'Sua conta foi excluída.')
         return redirect(settings.LOGOUT_REDIRECT_URL)
 
-    return render(request, 'delete.html', {'form': form})
+    return render(request, 'accounts/delete.html', {'form': form})
