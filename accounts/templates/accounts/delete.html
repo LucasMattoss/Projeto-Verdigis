@@ -1,11 +1,12 @@
-{% extends "base.html" %}
 
+{% extends "base.html" %}
 {% comment %}
   Exclusão de conta (accounts.views.delete) - frontend a ser implementado.
   Exige usuário logado (anônimos são redirecionados para o login).
 
   URL: {% url 'delete' %}  |  Métodos: GET (confirmação) e POST (exclui)
   Contexto: form (DeleteAccountForm) com o campo password (senha atual)
+
   O formulário precisa de {% csrf_token %} e deve enviar POST para a mesma URL. ✓ 
   Senha incorreta: form.password.errors. Sucesso: conta apagada + logout + redirect. ✓ 
 

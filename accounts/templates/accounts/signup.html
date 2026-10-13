@@ -1,3 +1,5 @@
+{% extends 'forum/base.html' %}
+
 {% comment %}
   Cadastro (accounts.views.signup) - frontend a ser implementado.
 
@@ -7,3 +9,36 @@
   O formulário precisa de {% csrf_token %} e deve enviar POST para a mesma URL.
   Erros: form.errors / form.<campo>.errors. Sucesso: login automático + redirect.
 {% endcomment %}
+
+
+{% block title %}Criar Conta - Verdigis{% endblock %}
+
+{% block content %}
+<section class="secao-form">
+    <h1>Criar Conta</h1>
+    <p>Preencha os dados abaixo para se cadastrar na plataforma.</p>
+
+    <form method="POST" action="{% url 'signup' %}" class="form-contato">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}
+                    <small>{{ field.help_text }}</small>
+                {% endif %}
+                {% if field.errors %}
+                    <div class="alert alert-error">
+                        {% for erro in field.errors %}{{ erro }}{% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-submit">Criar Conta</button>
+    </form>
+
+    <p>Já tem uma conta? <a href="{% url 'login' %}">Entrar</a></p>
+</section>
+{% endblock content %}

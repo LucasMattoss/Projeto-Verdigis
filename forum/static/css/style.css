@@ -14,10 +14,16 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
+h1 {
+    font-family: "helvetica-neue-lt-pro-cond", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.065em;
+    color: #778d44;
+}
 header {
     background-color: var(--primary-color);
-    padding: 1rem 2rem;
+    padding: 0.6rem 1rem;
     color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -72,9 +78,9 @@ nav {
 
 main {
     flex: 1;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 900px; 
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
     width: 100%;
     box-sizing: border-box;
 }
@@ -83,7 +89,7 @@ footer {
     background-color: #525fa2;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 0.1rem;
     margin-top: auto;
 }
 
@@ -98,10 +104,14 @@ footer {
 
 .secao-conteudo {
     background: white;
-    padding: 2rem;
+    padding: 2.2rem 2.5rem; 
     border-radius: 8px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.secao-conteudo p:first-of-type {
+    max-width: 80%; 
 }
 
 .secao-conteudo h2 {
@@ -115,6 +125,11 @@ footer {
 
 .secao-conteudo h3 {
     color: var(--primary-color);
+}
+
+.secao-pilares {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .pilares-grid {
@@ -164,6 +179,17 @@ footer {
     margin: 0 auto;
 }
 
+.secao-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao-form a:hover {
+    text-decoration: underline;
+    color: #91ab53;
+}
+
 .secao-form h2 {
     color: var(--primary-color);
     margin-top: 0;
@@ -184,7 +210,7 @@ footer {
 
 .form-group label {
     font-weight: 600;
-    color: #444;
+    color: var(--primary-color);
 }
 
 .form-group input,
@@ -247,7 +273,11 @@ button a {
 }
 
 .desc-index {
-    color: #778d44;
+    color: var(--text-color); 
+    font-weight: 400;         
+    font-size: 1.05rem;
+    line-height: 1.6;         
+    margin-top: 1rem;
 }
 
 .membros-lista a{
@@ -258,4 +288,10 @@ button a {
 .membros-lista a:hover {
     text-decoration: underline;
     color: #95b154;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+    opacity: 0.6;
 }

@@ -129,7 +129,7 @@ Veja o andamento de cada entrega em [docs/README.md](./docs/README.md).
 
 ## Equipe
 
-Estudantes de Ciências da Computação, CESAR School.
+Estudantes de Ciências da Computação e Design, CESAR School.
 
 - Ana Luiza Carvalho Xavier
 - Carlos Henrique Corrêa de Araújo Soares de Sousa
