@@ -1,0 +1,57 @@
+{% extends "forum/base.html" %}
+
+{% comment %}
+  Login (accounts.views.login) - frontend implementado ✓.
+
+  URL: {% url 'login' %}  |  Métodos: GET (exibe) e POST (envia)
+  Contexto:
+    form (LoginForm) com os campos username e password
+    next (str) - destino após o login; reenviar como <input type="hidden" name="next">
+  O formulário precisa de {% csrf_token %} e deve enviar POST para a mesma URL. ✓
+  Credenciais inválidas: form.non_field_errors. ✓
+  Sucesso: login + redirect para next (ou / se não houver). ✓
+{% endcomment %}
+
+{% block title %}Entrar - Verdigis{% endblock %}
+
+{% block content %}
+  <section class="secao-form">
+    <h1>Entrar</h1>
+
+    {% if form.non_field_errors %}
+    <div class="alert alert-error" role="alert">
+      {% for error in form.non_field_errors %}
+        <p>{{ error }}</p>
+      {% endfor %}
+    </div>
+    
+    {% elif next %}
+      <p class="help">Entre para acessar esta página.</p>
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}" class="form-login">
+        {% csrf_token %}
+
+      <div class="form-group">
+        <label for="{{ form.username.id_for_label }}">Usuário</label>
+        {{ form.username }}
+        {% for error in form.username.errors %}
+          <p class="field-error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.password.id_for_label }}">Senha</label>
+        {{ form.password }}
+        {% for error in form.password.errors %}
+          <p class="field-error">{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <input type="hidden" name="next" value="{{ next }}">
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+
+    <p class="auth-switch">Ainda não tem conta? <a href="{% url 'signup' %}"><u>Criar conta</u></a></p>
+  </section>
+{% endblock %}
