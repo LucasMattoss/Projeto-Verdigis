@@ -23,20 +23,8 @@ def index(request):
     return render(request, 'forum/index.html', context)
 
 
-def quem_somos(request):
-    secoes = SecaoConteudo.objects.filter(pagina=SecaoConteudo.PAGINA_QUEM_SOMOS)
-    membros = MembroEquipe.objects.filter(ativo=True)
-
-    context = {
-        'secoes': secoes,
-        'membros': membros,
-    }
-    return render(request, 'forum/quem_somos.html', context)
-
-
-def sobre_projeto(request):
-    secoes = SecaoConteudo.objects.filter(pagina=SecaoConteudo.PAGINA_SOBRE_PROJETO)
-    
+def sobre(request):
+    secoes = SecaoConteudo.objects.filter(pagina=SecaoConteudo.PAGINA_SOBRE)
     objetivos = ItemLista.objects.filter(categoria=ItemLista.CATEGORIA_OBJETIVO)
     praticas_fds = ItemLista.objects.filter(categoria=ItemLista.CATEGORIA_PRATICA_FDS)
     beneficios = ItemLista.objects.filter(categoria=ItemLista.CATEGORIA_BENEFICIO)
@@ -52,7 +40,7 @@ def sobre_projeto(request):
         'tecnologias': tecnologias,
         'pilares': pilares,
     }
-    return render(request, 'forum/sobre_projeto.html', context)
+    return render(request, 'forum/sobre.html', context)
 
 
 def fale_conosco(request):

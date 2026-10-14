@@ -5,13 +5,11 @@ from django.utils import timezone
 class SecaoConteudo(models.Model):
 
     PAGINA_INDEX = 'index'
-    PAGINA_QUEM_SOMOS = 'quem_somos'
-    PAGINA_SOBRE_PROJETO = 'sobre_projeto'
+    PAGINA_SOBRE = 'sobre'
 
     PAGINA_CHOICES = [
         (PAGINA_INDEX, 'Início'),
-        (PAGINA_QUEM_SOMOS, 'Quem Somos'),
-        (PAGINA_SOBRE_PROJETO, 'Sobre o Projeto'),
+        (PAGINA_SOBRE, 'Sobre'),
     ]
 
     pagina = models.CharField('Página', max_length=20, choices=PAGINA_CHOICES)

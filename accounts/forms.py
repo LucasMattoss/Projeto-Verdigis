@@ -27,6 +27,11 @@ class SignupForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.fields['username'].widget.attrs['placeholder'] = 'Digite seu nome de usuário'
+            self.fields['password'].widget.attrs['placeholder'] = 'Insira sua senha'
+    
     error_messages = {
         'invalid_login': 'Usuário ou senha incorretos.',
         'inactive': 'Esta conta está desativada.',
