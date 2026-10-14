@@ -52,6 +52,7 @@ class DeleteAccountForm(forms.Form):
     def __init__(self, user, *args, **kwargs):
         self.user = user
         super().__init__(*args, **kwargs)
+        self.fields['password'].widget.attrs['placeholder'] = 'Digite sua senha'
 
     def clean_password(self):
         password = self.cleaned_data['password']

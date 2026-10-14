@@ -1,5 +1,5 @@
 
-{% extends "base.html" %}
+{% extends "forum/base.html" %}
 {% comment %}
   Exclusão de conta (accounts.views.delete) - frontend a ser implementado.
   Exige usuário logado (anônimos são redirecionados para o login).
@@ -17,22 +17,31 @@
 {% block title %}Excluir conta - Verdigis{% endblock %}
 
 {% block content %}
-  <section class="form-card narrow">
-    <h1>Excluir conta</h1>
-    <p>Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.</p>
+  <section class="secao-form">
+    <h1>EXCLUIR CONTA</h1>
+    <p>Tem certeza que deseja excluir sua conta? Esta ação é definitiva e não pode ser desfeita.</p>
 
-    <form method="post" action="{% url 'delete' %}">
+    <form method="post" action="{% url 'delete' %}" class="form-contato">
         {% csrf_token %}
 
-      <div class="field">
-        <label for="{{ form.password.id_for_label }}">Senha atual</label>
-        {{ form.password }}
-        {% for error in form.password.errors %}
-          <p class="field-error">{{ error }}</p>
-        {% endfor %}
-      </div>
+      <div class="form-group">
+  <label for="id_password" style="display: block; margin-bottom: 0.4rem; color: #5a6e2a; font-weight: bold;">Confirme sua senha</label>
+  <input 
+    type="password" 
+    name="password" 
+    id="id_password" 
+    placeholder="Digite sua senha"
+    style="width: 100%; padding: 0.75rem 1rem; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;" 
+    required
+  >
+  {% for error in form.password.errors %}
+    <p class="field-error">{{ error }}</p>
+  {% endfor %}
+</div>
 
-      <button class="btn btn-danger" type="submit">Excluir conta</button>
+      <button class="btn btn-danger" type="submit" style="width: 100%; padding: 0.75rem; border-radius: 8px; margin-top: 1.5rem; font-weight: bold;">
+  Excluir conta
+</button>
     </form>
   </section>
 {% endblock %}
