@@ -32,6 +32,10 @@ class LoginForm(AuthenticationForm):
         'inactive': 'Esta conta está desativada.',
     }
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs['placeholder'] = 'Digite seu nome de usuário'
+        self.fields['password'].widget.attrs['placeholder'] = 'Digite sua senha'
 
 class DeleteAccountForm(forms.Form):
     password = forms.CharField(

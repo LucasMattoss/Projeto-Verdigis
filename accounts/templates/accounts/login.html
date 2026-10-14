@@ -18,7 +18,8 @@
 
 {% block content %}
   <section class="secao-form">
-    <h1>Entrar</h1>
+    <h1>ENTRAR</h1>
+    <p>Preencha os dados abaixo para fazer login na plataforma.</p>
 
     {% if form.non_field_errors %}
     <div class="alert alert-error" role="alert">
@@ -31,7 +32,7 @@
       <p class="help">Entre para acessar esta página.</p>
     {% endif %}
 
-    <form method="post" action="{% url 'login' %}" class="form-login">
+    <form method="post" action="{% url 'login' %}" class="form-contato">
         {% csrf_token %}
 
       <div class="form-group">
@@ -51,9 +52,9 @@
       </div>
 
       <input type="hidden" name="next" value="{{ next }}">
-      <button class="btn" type="submit">Entrar</button>
+      <button class="btn-submit" type="submit">Entrar</button>
     </form>
 
-    <p class="auth-switch">Ainda não tem conta? <a href="{% url 'signup' %}"><u>Criar conta</u></a></p>
+    <p class="auth-switch">Ainda não tem conta? <a href="{% url 'signup' %}">Criar conta</a></p>
   </section>
 {% endblock %}
