@@ -1,8 +1,10 @@
-# Verdigis
+<div align=center>
+  <img width="472,5" height="324,75" alt="logo readme2" src="https://github.com/user-attachments/assets/b49361b4-7813-4214-b947-b2e2e8aefaad" />
 
 Plataforma web para aumentar a percepção de valor e a adoção de práticas ESG em pequenas e médias empresas (PMEs). Projeto desenvolvido a partir de um desafio proposto pela Deloitte.
 
 **Site:** https://projeto-verdigis.onrender.com
+</div>
 
 ## Sobre o projeto
 
