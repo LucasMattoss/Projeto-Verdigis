@@ -32,7 +32,7 @@ DEBUG = ENVIRONMENT == 'development'
 SECRET_KEY = os.getenv('SECRET_KEY')
 if not SECRET_KEY:
     if DEBUG:
-        SECRET_KEY = 'django-insecure-chave-apenas-para-desenvolvimento-local'
+        SECRET_KEY = 'LDjMOgqRGuGe2S2hYuNgaRNm6plc9u7_NxAXkyxZWtKDD2Oh1mYiJEr4TFpsD8lrazA'
     else:
         raise ImproperlyConfigured('A variável de ambiente SECRET_KEY é obrigatória em produção.')
 
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'verdigis.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
